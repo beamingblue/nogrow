@@ -1,7 +1,6 @@
 plugins {
 	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
-	id "com.modrinth.minotaur" version "2.+"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -38,7 +37,7 @@ java {
 }
 
 jar {
-	from("LICENSE") {
+	from("LICENCE.txt") {
 		rename { "${it}_${project.archivesBaseName}"}
 	}
 }

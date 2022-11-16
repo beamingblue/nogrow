@@ -28,7 +28,7 @@ Please see the [issue tracker](https://github.com/beamingblue/nogrow/issues).
 
 ## Licence
 
-This mod is licensed under the [GNU General Public License](https://gnu.org/licenses/gpl-3.0.txt).
+This mod is licensed under the [MIT Licence](https://cdn-raw.modrinth.com/licenses/mit.txt).
 
 ## Contributing
 
