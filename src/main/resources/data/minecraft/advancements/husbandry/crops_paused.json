@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "nogrow:fermented_bone_meal"
+    },
+    "title": "Crops Paused",
+    "description": "Apply Fermented Bone Meal to farmland!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "nogrow:fermented_bone_meal"
+          ]
+        }
+      }
+    }
+  }
+}

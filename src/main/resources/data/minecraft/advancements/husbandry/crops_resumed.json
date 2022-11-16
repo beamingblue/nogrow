@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:potion",
+      "nbt": "{CustomPotionColor:7231295}"
+    },
+    "title": "Crops Resumed",
+    "description": "Clean contamination from farmland with some water!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/crops_paused",
+  "criteria": {
+    "use": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:potion"
+          ]
+        },
+        "location": {
+          "block": {
+            "blocks": [
+              "minecraft:farmland"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

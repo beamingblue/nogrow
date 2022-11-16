@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "nogrow",
+  "version": "1.0.0",
+
+  "name": "Don't Grow NOW!",
+  "description": "Stop crops from growing by doctoring farmland",
+  "authors": [
+    "BeamingBlue"
+  ],
+  "contact": {
+    "homepage": "https://beaming.blue/projects/nogrow",
+    "sources": "https://github.com/beamingblue/nogrow"
+  },
+
+  "license": "GPLv3",
+  "icon": "assets/nogrow/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "blue.beaming.nogrow.NoGrow"
+    ],
+    "client":[
+      "blue.beaming.nogrow.NoGrowClient"
+    ]
+  },
+  "mixins": [
+    "nogrow.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+  }
+}
