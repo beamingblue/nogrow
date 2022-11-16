@@ -14,9 +14,9 @@ Place the mod's jar file to your `mods` directory. Make sure you have installed 
 
 *Fermented Bone Meal* can be crafted using 8 bone meals and 1 fermented spider eye. It can be applied on farmland by right clicking or by dispensing it into farmland, turning it into *Doctored Farmland*. It prevents:
 
-<li> Farmland blocks from dehydrating and turning into dirt </li>
-<li> Crops from growing </li>
-<li> Players and mobs from trampling on farmland blocks </li>
+* Farmland blocks from dehydrating and turning into dirt
+* Crops from growing
+* Players and mobs from trampling on farmland blocks
 
 Doctored farmland can also be picked up when broken with a shovel enchanted with Silk Touch, to be moved somewhere else.
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "nogrow",
-  "version": "1.0.0",
+  "version": "1.0.1",
 
   "name": "Don't Grow NOW!",
   "description": "Stop crops from growing by doctoring farmland",
