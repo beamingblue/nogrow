@@ -4,11 +4,11 @@ Prevent crops from growing by doctoring farmland
 
 ---
 
-Want to stop crop growth for aesthetic purposes? Tired of those pesky players trampling on your farms? Then Don't Grow NOW! is just the right mod for you! Just apply some fermented:tm: bone meal to farmland and you're good to go!
+Tired of those pesky players trampling on your farms? Want to stop crop growth for aesthetic purposes? Then Don't Grow NOW! is just the right mod for you! Just apply some fermented:tm: bone meal to farmland and you're good to go!
 
 ## Installation
 
-Place the mod's jar file to your `mods` directory. Make sure you have installed [Fabric API](modrinth.com/mod/fabric-api) or [Quilt Standard Libraries](modrinth.com/mod/qsl) too.
+Place the mod's jar file to your `mods` directory. Make sure you have installed [Fabric API](https://modrinth.com/mod/fabric-api) or [Quilt Standard Libraries](https://modrinth.com/mod/qsl) too.
 
 ## Gameplay
 
@@ -24,11 +24,11 @@ Doctored farmland can be converted back into normal farmland by right clicking w
 
 ## Bugs
 
-Please see the [issue tracker](github.com/beamingblue/nogrow/issues).
+Please see the [issue tracker](https://github.com/beamingblue/nogrow/issues).
 
 ## Licence
 
-This mod is licensed under the [GNU General Public License](gnu.org/licenses/gpl-3.0.txt).
+This mod is licensed under the [GNU General Public License](https://gnu.org/licenses/gpl-3.0.txt).
 
 ## Contributing
 
