@@ -31,25 +31,26 @@ import net.minecraft.world.event.GameEvent;
 
 @Mixin(PotionItem.class)
 public abstract class MixinPotionItem{
+    private MixinPotionItem(){throw new AssertionError("Must not instantiate MixinPotionItem!");}
     @Inject(method = "useOnBlock(Lnet/minecraft/item/ItemUsageContext;)Lnet/minecraft/util/ActionResult;",at = @At(value = "TAIL"),cancellable = true)
-    public void maybeItIsDoctoredFarmland(ItemUsageContext context,CallbackInfoReturnable<ActionResult> cir){World world = context.getWorld();
+    private void maybeItIsDoctoredFarmland(ItemUsageContext context,CallbackInfoReturnable<ActionResult> cir){World world = context.getWorld();
         BlockPos blockPos = context.getBlockPos();
         PlayerEntity playerEntity = context.getPlayer();
         ItemStack itemStack = context.getStack();
         BlockState blockState = world.getBlockState(blockPos);
-        if(context.getSide() != Direction.DOWN && blockState.isOf(NoGrow.DOCTORED_FARMLAND_BLOCK) && PotionUtil.getPotion(itemStack) == Potions.WATER) {
-            world.playSound(null,blockPos,SoundEvents.ENTITY_GENERIC_SPLASH, SoundCategory.PLAYERS, 1.0f, 1.0f);
-            playerEntity.setStackInHand(context.getHand(), ItemUsage.exchangeStack(itemStack, playerEntity, new ItemStack(Items.GLASS_BOTTLE)));
+        if(context.getSide() != Direction.DOWN && blockState.isOf(NoGrow.DOCTORED_FARMLAND_BLOCK) && PotionUtil.getPotion(itemStack) == Potions.WATER){
+            world.playSound(null,blockPos,SoundEvents.ENTITY_GENERIC_SPLASH,SoundCategory.PLAYERS,1.0f,1.0f);
+            playerEntity.setStackInHand(context.getHand(),ItemUsage.exchangeStack(itemStack,playerEntity,new ItemStack(Items.GLASS_BOTTLE)));
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(itemStack.getItem()));
-            if (!world.isClient){
-                ServerWorld serverWorld = (ServerWorld)world;
-                for(int j = 0; j < 5; j++){
-                    serverWorld.spawnParticles(ParticleTypes.SPLASH, blockPos.getX() + world.random.nextDouble(), blockPos.getY() + 1, blockPos.getZ() + world.random.nextDouble(), 1, 0.0, 0.0, 0.0, 1.0);
+            if(!world.isClient){
+                ServerWorld serverWorld = (ServerWorld) world;
+                for(int j = 0;j < 5;j++){
+                    serverWorld.spawnParticles(ParticleTypes.SPLASH,blockPos.getX() + world.random.nextDouble(),blockPos.getY() + 1D,blockPos.getZ() + world.random.nextDouble(),1,0.0,0.0,0.0,1.0);
                 }
             }
-            world.playSound(null, blockPos, SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.BLOCKS, 1.0f, 1.0f);
-            world.emitGameEvent(null, GameEvent.FLUID_PLACE, blockPos);
-            world.setBlockState(blockPos, Blocks.FARMLAND.getDefaultState().with(FarmlandBlock.MOISTURE,7));
+            world.playSound(null,blockPos,SoundEvents.ITEM_BOTTLE_EMPTY,SoundCategory.BLOCKS,1.0f,1.0f);
+            world.emitGameEvent(null,GameEvent.FLUID_PLACE,blockPos);
+            world.setBlockState(blockPos,Blocks.FARMLAND.getDefaultState().with(FarmlandBlock.MOISTURE,7));
             cir.setReturnValue(ActionResult.success(world.isClient));
         }
     }

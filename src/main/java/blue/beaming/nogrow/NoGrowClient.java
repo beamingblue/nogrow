@@ -10,7 +10,7 @@ import net.minecraft.client.particle.SuspendParticle;
 public class NoGrowClient implements ClientModInitializer{
     @Override
     public void onInitializeClient(){
-        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture, registry) -> registry.register(new Identifier(NoGrow.ID, "particle/poisoned_happy_villager"))));
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((atlasTexture,registry) -> registry.register(new Identifier(NoGrow.ID,"particle/poisoned_happy_villager"))));
         ParticleFactoryRegistry.getInstance().register(NoGrow.POISONED_HAPPY_VILLAGER,SuspendParticle.HappyVillagerFactory::new);
     }
 }
