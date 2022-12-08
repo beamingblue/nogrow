@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "nogrow",
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "name": "Don't Grow NOW!",
   "description": "Stop crops from growing by doctoring farmland",
@@ -13,7 +13,7 @@
     "sources": "https://github.com/beamingblue/nogrow"
   },
 
-  "license": "GPLv3",
+  "license": "MIT",
   "icon": "assets/nogrow/icon.png",
 
   "environment": "*",
