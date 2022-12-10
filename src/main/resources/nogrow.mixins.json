@@ -7,8 +7,7 @@
     "MixinCropBlock",
     "MixinPotionItem",
     "MixinStemBlock",
-    "MixinAttachedStemBlock",
-    "MixinDispenserBehavior"
+    "MixinAttachedStemBlock"
   ],
   "client": [
   ],
